@@ -1,0 +1,32 @@
+
+{
+    "model":
+    {
+        "type":"vqvae_lto",
+        "pt_name":"vqvae_category",
+        "pose_size": 35,
+        "input_frames":10,
+        "output_frames":1
+    },
+    "train_parameter":
+    {
+        "mini_batch":256,
+        "teacher_epochs":150,
+        "ramping_epochs":0,
+        "student_epochs":0,
+        "num_experts":16,
+        "initial_lr":1e-4,
+        "recursive_frames":10,
+        "condition_frames":1,
+        "hidden_dim":128,
+        "code_dim": 4096,
+        "latent_size":256,
+        "beta":0.3
+    },
+    "path":
+    {
+        "pt_path":"trained_models/",
+        "lua_path":"gym_mp/MP_tuna_category.lua"
+    }
+}
+

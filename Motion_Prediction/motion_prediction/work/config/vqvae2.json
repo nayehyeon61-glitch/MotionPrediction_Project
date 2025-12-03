@@ -1,0 +1,31 @@
+
+{
+    "model":
+    {
+        "type":"vqvae_lto",
+        "pt_name":"simplevqvae",
+        "pose_size": 35,
+        "input_frames":10,
+        "output_frames":1
+    },
+    "train_parameter":
+    {
+        "mini_batch":2048,
+        "teacher_epochs":10,
+        "ramping_epochs":10,
+        "student_epochs":100,
+        "num_experts":16,
+        "initial_lr":1e-4,
+        "recursive_frames":10,
+        "condition_frames":1,
+        "hidden_dim":256,
+        "code_dim":8192,
+        "latent_size":128,
+        "beta":0.3
+    },
+    "path":
+    {
+        "pt_path":"trained_models/",
+        "lua_path":"gym_mp/MP_tuna.lua"
+    }
+}

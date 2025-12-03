@@ -1,0 +1,870 @@
+DEF SampleRobot Humanoid { 
+ name "hyunwoo"
+ humanoidBody [
+
+  DEF Hips Joint 
+  {
+    jointType "free"
+    translation 0 0 0 
+    children [
+      Segment 
+      {
+        centerOfMass 0.000188 0.089804 -0.000282
+        mass 16.194903
+        momentsOfInertia [0.020482 -0.000016 -0.000075 -0.000016 0.054869 0.000078 -0.000075 0.000078 0.053480]
+        material "lightgrey"
+        children   Transform { rotation 0.000000 0.000000 0.000000 0.000000 translation 0.000000 0.140000 0.000000  children Shape {geometry Box { size 0.300000 0.240000 0.150000 }}}
+      
+      
+      }
+      DEF LeftHip Joint 
+      {
+        jointType "rotate"
+        jointAxis "YZX"
+        translation 0.082442 0.002344 -0.001963
+        children [
+          Segment 
+          {
+            centerOfMass 0.000132 -0.220507 -0.000320
+            mass 8.845420
+            momentsOfInertia [0.126956 -0.000004 -0.000075 -0.000004 0.031270 0.000290 -0.000075 0.000290 0.127025]
+            material "lightgrey"
+            children   Transform { rotation 0.000000 0.000000 0.000000 0.000000 translation 0.000000 -0.220000 0.000000  children Shape {geometry Box { size 0.150000 0.440000 0.150000 }}}
+          
+          
+          }
+          DEF LeftKnee Joint 
+          {
+            jointType "rotate"
+            jointAxis "X"
+            translation 0.000000 -0.444242 0.000000
+            children [
+              Segment 
+              {
+                centerOfMass 0.000098 -0.220049 -0.000113
+                mass 5.674571
+                momentsOfInertia [0.078141 0.000000 -0.000029 0.000000 0.012864 0.000014 -0.000029 0.000014 0.078141]
+                material "lightgrey"
+                children   Transform { rotation 0.000000 0.000000 0.000000 0.000000 translation 0.000000 -0.220000 0.000000  children Shape {geometry Box { size 0.120000 0.400000 0.120000 }}}
+              
+              
+              }
+              DEF LeftAnkle Joint 
+              {
+                jointType "rotate"
+                jointAxis "YX"
+                translation 0.000000 -0.431735 0.000000
+                children [
+                  Segment 
+                  {
+                    centerOfMass -0.000181 -0.064980 0.050002
+                    mass 1.446839
+                    momentsOfInertia [0.056969 0.000000 0.000000 0.000000 0.052910 -0.011684 0.000000 -0.011684 0.016177]
+                    material "lightgrey"
+                    children [
+					#see gang_python.git work/test_rotate_foot.py
+                    Transform { rotation -0.898438 0.339937 -0.277943    0.22514008776088 translation 0.010000 -0.050000 0.040000  children Shape {geometry Box { size 0.090000 0.070000 0.210000 }}}
+                    ]
+                  
+                  }
+                ]
+              } # LeftAnkle
+              
+            ]
+          } # LeftKnee
+          
+        ]
+      } # LeftHip
+      
+      DEF RightHip Joint 
+      {
+        jointType "rotate"
+        jointAxis "YZX"
+        translation -0.082442 -0.002344 0.001963
+        children [
+          Segment 
+          {
+            centerOfMass 0.000103 -0.220097 -0.000122
+            mass 9.755612
+            momentsOfInertia [0.166439 -0.000026 -0.000065 -0.000026 0.034571 0.000061 -0.000065 0.000061 0.166439]
+            material "lightgrey"
+            children   Transform { rotation 0.000000 0.000000 0.000000 0.000000 translation 0.000000 -0.220000 0.000000  children Shape {geometry Box { size 0.150000 0.440000 0.150000 }}}
+          
+          
+          }
+          DEF RightKnee Joint 
+          {
+            jointType "rotate"
+            jointAxis "X"
+            translation 0.000000 -0.444242 0.000000
+            children [
+              Segment 
+              {
+                centerOfMass 0.000098 -0.220049 -0.000113
+                mass 5.674571
+                momentsOfInertia [0.078141 0.000000 -0.000029 0.000000 0.012864 0.000014 -0.000029 0.000014 0.078141]
+                material "lightgrey"
+                children   Transform { rotation 0.000000 0.000000 0.000000 0.000000 translation 0.000000 -0.220000 0.000000  children Shape {geometry Box { size 0.120000 0.400000 0.120000 }}}
+              
+              
+              }
+              DEF RightAnkle Joint 
+              {
+                jointType "rotate"
+                jointAxis "YX"
+                translation 0.000000 -0.431735 0.000000
+                children [
+                  Segment 
+                  {
+                    centerOfMass -0.000181 -0.064980 0.050002
+                    mass 1.446839
+                    momentsOfInertia [0.056969 0.000000 0.000000 0.000000 0.052910 -0.011684 0.000000 -0.011684 0.016177]
+                    material "lightgrey"
+                    children [
+					#see gang_python.git work/test_rotate_foot.py
+                    Transform { rotation -0.898438 -0.339937 0.277943    0.22514008776088 translation -0.010000 -0.05000 0.040000  children Shape {geometry Box { size 0.090000 0.070000 0.210000 }}}
+                    ]
+                  
+                  }
+                ]
+              } # RightAnkle
+              
+            ]
+          } # RightKnee
+          
+        ]
+      } # RightHip
+      
+      DEF Chest Joint 
+      {
+        jointType "rotate"
+        jointAxis "YZX"
+        translation -0.003774 0.297994 -0.005414
+        children [
+          Segment 
+          {
+            centerOfMass 0.000245 0.029740 -0.000207
+            mass 15.897687
+            momentsOfInertia [0.023174 -0.000007 -0.000062 -0.000007 0.046422 0.000066 -0.000062 0.000066 0.060348]
+            material "lightgrey"
+            children   Transform { rotation 0.000000 0.000000 0.000000 0.000000 translation 0.000000 0.130000 0.000000  children Shape {geometry Box { size 0.300000 0.300000 0.150000 }}}
+          
+          
+          }
+                  DEF LeftShoulder Joint 
+                  {
+                    jointType "rotate"
+                    jointAxis "ZXY"
+                    translation 0.170 0.228321 -0.028120
+                    children [
+                      Segment 
+                      {
+                        centerOfMass 0.150245 -0.000132 -0.000207
+                        mass 2.948843
+                        momentsOfInertia [0.004631 -0.000002 -0.000031 -0.000002 0.023211 0.000017 -0.000031 0.000017 0.023218]
+                        material "lightgrey"
+                        children   Transform { rotation 0.000000 0.000000 0.000000 0.000000 translation 0.150000 0.000000 0.000000  children Shape {geometry Box { size 0.300000 0.100000 0.100000 }}}
+                      
+                      
+                      }
+                      DEF LeftElbow Joint 
+                      {
+                        jointType "rotate"
+                        jointAxis "Y"
+                        translation 0.290549 0.000000 0.000000
+                        children [
+                          Segment 
+                          {
+                            centerOfMass 0.120188 -0.000132 -0.000207
+                            mass 2.260780
+                            momentsOfInertia [0.003550 -0.000001 -0.000018 -0.000001 0.011190 0.000013 -0.000018 0.000013 0.011196]
+                            material "lightgrey"
+                            children   Transform { rotation 0.000000 0.000000 0.000000 0.000000 translation 0.170000 0.000000 0.000000  children Shape {geometry Box { size 0.330000 0.080000 0.080000 }}}
+                          }
+                  DEF LeftWrist Joint 
+                    {
+                      jointType "rotate"
+                      jointAxis "ZXY"
+                      translation 0.320143 0.000000 0.000000
+                      children [
+                        Segment 
+                        {
+                          centerOfMass 0.040344 0.000556 0.000855
+                          mass 0.492822
+                          momentsOfInertia [0.000351 0.000000 0.000000 0.000000 0.000099 0.000000 0.000000 0.000000 0.000351]
+                          material "lightgrey"
+                          children [
+                          Transform { rotation 0.772673 -0.000000 -0.634804 1.653539 translation 0.011684 -0.001526 0.014222  children Shape {geometry Capsule { radius 0.015000 height 0.036938 }}}
+                          Transform { rotation 0.294038 -0.000000 -0.955794 1.565367 translation 0.043777 0.000249 0.013467  children Shape {geometry Capsule { radius 0.015000 height 0.091604 }}}
+                          Transform { rotation 0.081464 0.000000 -0.996676 1.545975 translation 0.045442 0.001132 0.003714  children Shape {geometry Capsule { radius 0.015000 height 0.091215 }}}
+                          Transform { rotation -0.123775 -0.000000 -0.992310 1.546119 translation 0.043521 0.001083 -0.005429  children Shape {geometry Capsule { radius 0.015000 height 0.087743 }}}
+                          Transform { rotation -0.347087 0.000000 -0.937833 1.556119 translation 0.040348 0.000631 -0.014933  children Shape {geometry Capsule { radius 0.015000 height 0.086055 }}}
+                          ]
+                        
+                        }
+                        DEF LeftHandThumb1 Joint 
+                        {
+                          jointType "rotate"
+                          jointAxis "ZXY"
+                          translation 0.023368 -0.003053 0.028443
+                          children [
+                            Segment 
+                            {
+                              centerOfMass 0.011944 -0.005820 0.007113
+                              mass 0.037744
+                              momentsOfInertia [0.000007 0.000000 0.000000 0.000000 0.000008 0.000000 0.000000 0.000000 0.000007]
+                              material "lightgrey"
+                              children   Transform { rotation 0.511685 0.000000 -0.859173 1.967300 translation 0.011944 -0.005820 0.007113  children Shape {geometry Capsule { radius 0.015000 height 0.030141 }}}
+                            
+                            
+                            }
+                            DEF LeftHandThumb2 Joint 
+                            {
+                              jointType "rotate"
+                              jointAxis "Y"
+                              translation 0.023887 -0.011640 0.014226
+                              children [
+                                Segment 
+                                {
+                                  centerOfMass 0.012943 -0.005185 0.007623
+                                  mass 0.039798
+                                  momentsOfInertia [0.000007 0.000000 0.000000 0.000000 0.000008 0.000000 0.000000 0.000000 0.000007]
+                                  material "lightgrey"
+                                  children   Transform { rotation 0.507476 -0.000000 -0.861666 1.903184 translation 0.012943 -0.005185 0.007623  children Shape {geometry Capsule { radius 0.015000 height 0.031782 }}}
+                                
+                                
+                                }
+                                DEF LeftHandThumb3 Joint 
+                                {
+                                  jointType "rotate"
+                                  jointAxis "Y"
+                                  translation 0.025887 -0.010370 0.015246
+                                  children [
+                                    Segment 
+                                    {
+                                      centerOfMass 0.000000 0.000000 0.000000
+                                      mass 0.033393
+                                      momentsOfInertia [0.000005 0.000000 0.000000 0.000000 0.000005 0.000000 0.000000 0.000000 0.000005]
+                                      material "lightgrey"
+                                      #children   Shape {geometry Ellipsoid { size 0.020000 0.020000 0.020000 }}
+                                      children   Transform { rotation 0.507476 -0.000000 -0.861666 1.903184 translation 0.012943 -0.005185 0.007623  children Shape {geometry Capsule { radius 0.015000 height 0.025782 }}}
+                                    
+                                    }
+                                  ]
+                                } # LeftHandThumb3
+                                
+                              ]
+                            } # LeftHandThumb2
+                            
+                          ]
+                        } # LeftHandThumb1
+
+                        DEF LeftHandIndex1 Joint 
+                        {
+                          jointType "rotate"
+                          jointAxis "ZXY"
+                          translation 0.087553 0.000497 0.026935
+                          children [
+                            Segment 
+                            {
+                              centerOfMass 0.019508 -0.003481 -0.000776
+                              mass 0.049666
+                              momentsOfInertia [0.000011 0.000000 0.000000 0.000000 0.000010 0.000000 0.000000 0.000000 0.000011]
+                              material "lightgrey"
+                              children   Transform { rotation -0.039731 -0.000000 -0.999210 1.747259 translation 0.019508 -0.003481 -0.000776  children Shape {geometry Capsule { radius 0.015000 height 0.039662 }}}
+                            
+                            
+                            }
+                            DEF LeftHandIndex2 Joint 
+                            {
+                              jointType "rotate"
+                              jointAxis "Z"
+                              translation 0.039015 -0.006963 -0.001551
+                              children [
+                                Segment 
+                                {
+                                  centerOfMass 0.012428 -0.002210 -0.000613
+                                  mass 0.031651
+                                  momentsOfInertia [0.000005 0.000000 0.000000 0.000000 0.000006 0.000000 0.000000 0.000000 0.000005]
+                                  material "lightgrey"
+                                  children   Transform { rotation -0.049230 -0.000000 -0.998787 1.746568 translation 0.012428 -0.002210 -0.000613  children Shape {geometry Capsule { radius 0.015000 height 0.025276 }}}
+                                
+                                
+                                }
+                                DEF LeftHandIndex3 Joint 
+                                {
+                                  jointType "rotate"
+                                  jointAxis "Z"
+                                  translation 0.024856 -0.004420 -0.001225
+                                  children [
+                                    Segment 
+                                    {
+                                      centerOfMass 0.000000 0.000000 0.000000
+                                      mass 0.033393
+                                      momentsOfInertia [0.000005 0.000000 0.000000 0.000000 0.000005 0.000000 0.000000 0.000000 0.000005]
+                                      material "lightgrey"
+                                      #children   Shape {geometry Ellipsoid { size 0.020000 0.020000 0.020000 }}
+                                    children   Transform { rotation -0.049230 -0.000000 -0.998787 1.746568 translation 0.012428 -0.002210 -0.000613  children Shape {geometry Capsule { radius 0.015000 height 0.019276 }}}
+                                    
+                                    }
+                                  ]
+                                } # LeftHandIndex3
+                                
+                              ]
+                            } # LeftHandIndex2
+                            
+                          ]
+                        } # LeftHandIndex1
+                        
+                        DEF LeftHandMiddle1 Joint 
+                        {
+                          jointType "rotate"
+                          jointAxis "ZXY"
+                          translation 0.090884 0.002264 0.007428
+                          children [
+                            Segment 
+                            {
+                              centerOfMass 0.022819 -0.003773 0.000141
+                              mass 0.057927
+                              momentsOfInertia [0.000016 0.000000 0.000000 0.000000 0.000012 0.000000 0.000000 0.000000 0.000016]
+                              material "lightgrey"
+                              children   Transform { rotation 0.006161 0.000000 -0.999981 1.734640 translation 0.022819 -0.003773 0.000141  children Shape {geometry Capsule { radius 0.015000 height 0.046259 }}}
+                            
+                            
+                            }
+                            DEF LeftHandMiddle2 Joint 
+                            {
+                              jointType "rotate"
+                              jointAxis "Z"
+                              translation 0.045639 -0.007545 0.000281
+                              children [
+                                Segment 
+                                {
+                                  centerOfMass 0.012984 -0.002142 -0.000028
+                                  mass 0.032957
+                                  momentsOfInertia [0.000005 0.000000 0.000000 0.000000 0.000007 0.000000 0.000000 0.000000 0.000005]
+                                  material "lightgrey"
+                                  children   Transform { rotation -0.002193 0.000000 -0.999998 1.734310 translation 0.012984 -0.002142 -0.000028  children Shape {geometry Capsule { radius 0.015000 height 0.026319 }}}
+                                
+                                
+                                }
+                                DEF LeftHandMiddle3 Joint 
+                                {
+                                  jointType "rotate"
+                                  jointAxis "Z"
+                                  translation 0.025968 -0.004284 -0.000057
+                                  children [
+                                    Segment 
+                                    {
+                                      centerOfMass 0.000000 0.000000 0.000000
+                                      mass 0.033393
+                                      momentsOfInertia [0.000005 0.000000 0.000000 0.000000 0.000005 0.000000 0.000000 0.000000 0.000005]
+                                      material "lightgrey"
+                                      #children   Shape {geometry Ellipsoid { size 0.020000 0.020000 0.020000 }}
+                                      children   Transform { rotation -0.002193 0.000000 -0.999998 1.734310 translation 0.012984 -0.002142 -0.000028  children Shape {geometry Capsule { radius 0.015000 height 0.020319 }}}
+                                    
+                                    }
+                                  ]
+                                } # LeftHandMiddle3
+                                
+                              ]
+                            } # LeftHandMiddle2
+                            
+                          ]
+                        } # LeftHandMiddle1
+
+                        DEF LeftHandRing1 Joint 
+                        {
+                          jointType "rotate"
+                          jointAxis "ZXY"
+                          translation 0.087041 0.002165 -0.010857
+                          children [
+                            Segment 
+                            {
+                              centerOfMass 0.021566 -0.003191 0.000579
+                              mass 0.054619
+                              momentsOfInertia [0.000014 0.000000 0.000000 0.000000 0.000011 0.000000 0.000000 0.000000 0.000014]
+                              material "lightgrey"
+                              children   Transform { rotation 0.026839 -0.000000 -0.999640 1.717620 translation 0.021566 -0.003191 0.000579  children Shape {geometry Capsule { radius 0.015000 height 0.043617 }}}
+                            
+                            
+                            }
+                            DEF LeftHandRing2 Joint 
+                            {
+                              jointType "rotate"
+                              jointAxis "Z"
+                              translation 0.043132 -0.006381 0.001158
+                              children [
+                                Segment 
+                                {
+                                  centerOfMass 0.013092 -0.001936 0.000230
+                                  mass 0.033150
+                                  momentsOfInertia [0.000005 0.000000 0.000000 0.000000 0.000007 0.000000 0.000000 0.000000 0.000005]
+                                  material "lightgrey"
+                                  children   Transform { rotation 0.017580 0.000000 -0.999845 1.717611 translation 0.013092 -0.001936 0.000230  children Shape {geometry Capsule { radius 0.015000 height 0.026473 }}}
+                                
+                                
+                                }
+                                DEF LeftHandRing3 Joint 
+                                {
+                                  jointType "rotate"
+                                  jointAxis "Z"
+                                  translation 0.026184 -0.003873 0.000460
+                                  children [
+                                    Segment 
+                                    {
+                                      centerOfMass 0.000000 0.000000 0.000000
+                                      mass 0.033393
+                                      momentsOfInertia [0.000005 0.000000 0.000000 0.000000 0.000005 0.000000 0.000000 0.000000 0.000005]
+                                      material "lightgrey"
+                                      #children   Shape {geometry Ellipsoid { size 0.020000 0.020000 0.020000 }}
+                                      children   Transform { rotation 0.017580 0.000000 -0.999845 1.717611 translation 0.013092 -0.001936 0.000230  children Shape {geometry Capsule { radius 0.015000 height 0.020473 }}}
+                                    
+                                    
+                                    }
+                                  ]
+                                } # LeftHandRing3
+                                
+                              ]
+                            } # LeftHandRing2
+                            
+                          ]
+                        } # LeftHandRing1
+
+                        DEF LeftHandPinky1 Joint 
+                        {
+                          jointType "rotate"
+                          jointAxis "ZXY"
+                          translation 0.080697 0.001263 -0.029865
+                          children [
+                            Segment 
+                            {
+                              centerOfMass 0.016230 -0.003364 0.001119
+                              mass 0.041607
+                              momentsOfInertia [0.000008 0.000000 0.000000 0.000000 0.000008 0.000000 0.000000 0.000000 0.000008]
+                              material "lightgrey"
+                              children   Transform { rotation 0.068801 0.000000 -0.997630 1.774685 translation 0.016230 -0.003364 0.001119  children Shape {geometry Capsule { radius 0.015000 height 0.033226 }}}
+                            
+                            
+                            }
+                            DEF LeftHandPinky2 Joint 
+                            {
+                              jointType "rotate"
+                              jointAxis "Z"
+                              translation 0.032461 -0.006728 0.002239
+                              children [
+                                Segment 
+                                {
+                                  centerOfMass 0.011105 -0.002304 0.000667
+                                  mass 0.028454
+                                  momentsOfInertia [0.000004 0.000000 0.000000 0.000000 0.000006 0.000000 0.000000 0.000000 0.000004]
+                                  material "lightgrey"
+                                  children   Transform { rotation 0.059957 -0.000000 -0.998201 1.774998 translation 0.011105 -0.002304 0.000667  children Shape {geometry Capsule { radius 0.015000 height 0.022723 }}}
+                                
+                                
+                                }
+                                DEF LeftHandPinky3 Joint 
+                                {
+                                  jointType "rotate"
+                                  jointAxis "Z"
+                                  translation 0.022211 -0.004608 0.001334
+                                  children [
+                                    Segment 
+                                    {
+                                      centerOfMass 0.000000 0.000000 0.000000
+                                      mass 0.033393
+                                      momentsOfInertia [0.000005 0.000000 0.000000 0.000000 0.000005 0.000000 0.000000 0.000000 0.000005]
+                                      material "lightgrey"
+                                      #children   Shape {geometry Ellipsoid { size 0.020000 0.020000 0.020000 }}
+                                      children   Transform { rotation 0.059957 -0.000000 -0.998201 1.774998 translation 0.011105 -0.002304 0.000667  children Shape {geometry Capsule { radius 0.015000 height 0.016723 }}}
+                                    
+                                    
+                                    }
+                                  ]
+                                } # LeftHandPinky3
+                                
+                              ]
+                            } # LeftHandPinky2
+                            
+                          ]
+                        } # LeftHandPinky1
+                        
+                      ]
+                    } # LeftWrist                  
+                  ]
+                      } # LeftElbow
+                      
+                    ]
+                  } # LeftShoulder
+                  
+              
+                  DEF RightShoulder Joint 
+                  {
+                    jointType "rotate"
+                    jointAxis "ZXY"
+                    translation -0.17 0.221686 0.007191
+                    children [
+                      Segment 
+                      {
+                        centerOfMass -0.149755 -0.000132 -0.000207
+                        mass 2.948843
+                        momentsOfInertia [0.004631 -0.000002 -0.000031 -0.000002 0.023211 0.000017 -0.000031 0.000017 0.023218]
+                        material "lightgrey"
+                        children   Transform { rotation 0.000000 0.000000 0.000000 0.000000 translation -0.150000 0.000000 0.000000  children Shape {geometry Box { size 0.300000 0.100000 0.100000 }}}
+                      }
+                      DEF RightElbow Joint 
+                      {
+                        jointType "rotate"
+                        jointAxis "Y"
+                        translation -0.290549 0.000000 0.000000
+                        children [
+                          Segment 
+                          {
+                            centerOfMass -0.119812 -0.000132 -0.000207
+                            mass 2.260780
+                            momentsOfInertia [0.003550 -0.000001 -0.000018 -0.000001 0.011190 0.000013 -0.000018 0.000013 0.011196]
+                            material "lightgrey"
+                            children   Transform { rotation 0.000000 0.000000 0.000000 0.000000 translation -0.170000 0.000000 0.000000  children Shape {geometry Box { size 0.330000 0.08000 0.08000 }}}
+                          }
+                  DEF RightWrist Joint 
+                    {
+                      jointType "rotate"
+                      jointAxis "ZXY"
+                      translation -0.320143 0.000000 0.000000
+                      children [
+                        Segment 
+                        {
+                          centerOfMass -0.040344 0.000558 0.000855
+                          mass 0.492822
+                          momentsOfInertia [0.000351 0.000000 0.000000 0.000000 0.000099 0.000000 0.000000 0.000000 0.000351]
+                          material "lightgrey"
+                          children [
+                          Transform { rotation 0.772663 0.000000 0.634816 1.653511 translation -0.011685 -0.001526 0.014222  children Shape {geometry Capsule { radius 0.015000 height 0.036939 }}}
+                          Transform { rotation 0.294048 0.000000 0.955791 1.565338 translation -0.043776 0.000250 0.013468  children Shape {geometry Capsule { radius 0.015000 height 0.091603 }}}
+                          Transform { rotation 0.081472 0.000000 0.996676 1.545947 translation -0.045442 0.001133 0.003715  children Shape {geometry Capsule { radius 0.015000 height 0.091215 }}}
+                          Transform { rotation -0.123767 0.000000 0.992311 1.546080 translation -0.043521 0.001084 -0.005428  children Shape {geometry Capsule { radius 0.015000 height 0.087742 }}}
+                          Transform { rotation -0.347078 0.000000 0.937836 1.556092 translation -0.040349 0.000633 -0.014932  children Shape {geometry Capsule { radius 0.015000 height 0.086056 }}}
+                          ]
+                        
+                        }
+                        DEF RightHandThumb1 Joint 
+                        {
+                          jointType "rotate"
+                          jointAxis "ZXY"
+                          translation -0.023369 -0.003052 0.028444
+                          children [
+                            Segment 
+                            {
+                              centerOfMass -0.011944 -0.005820 0.007113
+                              mass 0.037744
+                              momentsOfInertia [0.000007 0.000000 0.000000 0.000000 0.000008 0.000000 0.000000 0.000000 0.000007]
+                              material "lightgrey"
+                              children   Transform { rotation 0.511683 -0.000000 0.859174 1.967318 translation -0.011944 -0.005820 0.007113  children Shape {geometry Capsule { radius 0.015000 height 0.030141 }}}
+                            
+                            
+                            }
+                            DEF RightHandThumb2 Joint 
+                            {
+                              jointType "rotate"
+                              jointAxis "Y"
+                              translation -0.023887 -0.011641 0.014226
+                              children [
+                                Segment 
+                                {
+                                  centerOfMass -0.012943 -0.005185 0.007623
+                                  mass 0.039798
+                                  momentsOfInertia [0.000007 0.000000 0.000000 0.000000 0.000008 0.000000 0.000000 0.000000 0.000007]
+                                  material "lightgrey"
+                                  children   Transform { rotation 0.507479 -0.000000 0.861664 1.903194 translation -0.012943 -0.005185 0.007623  children Shape {geometry Capsule { radius 0.015000 height 0.031782 }}}
+                                
+                                
+                                }
+                                DEF RightHandThumb3 Joint 
+                                {
+                                  jointType "rotate"
+                                  jointAxis "Y"
+                                  translation -0.025886 -0.010371 0.015246
+                                  children [
+                                    Segment 
+                                    {
+                                      centerOfMass 0.000000 0.000000 0.000000
+                                      mass 0.033393
+                                      momentsOfInertia [0.000005 0.000000 0.000000 0.000000 0.000005 0.000000 0.000000 0.000000 0.000005]
+                                      material "lightgrey"
+                                      #children   Shape {geometry Ellipsoid { size 0.020000 0.020000 0.020000 }}
+                                      children   Transform { rotation 0.507479 -0.000000 0.861664 1.903194 translation -0.012943 -0.005185 0.007623  children Shape {geometry Capsule { radius 0.015000 height 0.025782 }}}
+                                    
+                                    
+                                    }
+                                  ]
+                                } # RightHandThumb3
+                                
+                              ]
+                            } # RightHandThumb2
+                            
+                          ]
+                        } # RightHandThumb1
+
+                        DEF RightHandIndex1 Joint 
+                        {
+                          jointType "rotate"
+                          jointAxis "ZXY"
+                          translation -0.087552 0.000500 0.026935
+                          children [
+                            Segment 
+                            {
+                              centerOfMass -0.019507 -0.003483 -0.000776
+                              mass 0.049666
+                              momentsOfInertia [0.000011 0.000000 0.000000 0.000000 0.000010 0.000000 0.000000 0.000000 0.000011]
+                              material "lightgrey"
+                              children   Transform { rotation -0.039739 0.000000 0.999210 1.747323 translation -0.019507 -0.003483 -0.000776  children Shape {geometry Capsule { radius 0.015000 height 0.039662 }}}
+                            
+                            
+                            }
+                            DEF RightHandIndex2 Joint 
+                            {
+                              jointType "rotate"
+                              jointAxis "Z"
+                              translation -0.039015 -0.006965 -0.001552
+                              children [
+                                Segment 
+                                {
+                                  centerOfMass -0.012428 -0.002210 -0.000613
+                                  mass 0.031651
+                                  momentsOfInertia [0.000005 0.000000 0.000000 0.000000 0.000006 0.000000 0.000000 0.000000 0.000005]
+                                  material "lightgrey"
+                                  children   Transform { rotation -0.049236 0.000000 0.998787 1.746569 translation -0.012428 -0.002210 -0.000613  children Shape {geometry Capsule { radius 0.015000 height 0.025276 }}}
+                                
+                                
+                                }
+                                DEF RightHandIndex3 Joint 
+                                {
+                                  jointType "rotate"
+                                  jointAxis "Z"
+                                  translation -0.024856 -0.004420 -0.001225
+                                  children [
+                                    Segment 
+                                    {
+                                      centerOfMass 0.000000 0.000000 0.000000
+                                      mass 0.033393
+                                      momentsOfInertia [0.000005 0.000000 0.000000 0.000000 0.000005 0.000000 0.000000 0.000000 0.000005]
+                                      material "lightgrey"
+                                      #children   Shape {geometry Ellipsoid { size 0.020000 0.020000 0.020000 }}
+                                      children   Transform { rotation -0.049236 0.000000 0.998787 1.746569 translation -0.012428 -0.002210 -0.000613  children Shape {geometry Capsule { radius 0.015000 height 0.019276 }}}
+                                    
+                                    
+                                    }
+                                  ]
+                                } # RightHandIndex3
+                                
+                              ]
+                            } # RightHandIndex2
+                            
+                          ]
+                        } # RightHandIndex1
+                        
+                        DEF RightHandMiddle1 Joint 
+                        {
+                          jointType "rotate"
+                          jointAxis "ZXY"
+                          translation -0.090884 0.002266 0.007429
+                          children [
+                            Segment 
+                            {
+                              centerOfMass -0.022820 -0.003774 0.000140
+                              mass 0.057928
+                              momentsOfInertia [0.000016 0.000000 0.000000 0.000000 0.000012 0.000000 0.000000 0.000000 0.000016]
+                              material "lightgrey"
+                              children   Transform { rotation 0.006152 -0.000000 0.999981 1.734703 translation -0.022820 -0.003774 0.000140  children Shape {geometry Capsule { radius 0.015000 height 0.046260 }}}
+                            
+                            
+                            }
+                            DEF RightHandMiddle2 Joint 
+                            {
+                              jointType "rotate"
+                              jointAxis "Z"
+                              translation -0.045639 -0.007548 0.000281
+                              children [
+                                Segment 
+                                {
+                                  centerOfMass -0.012984 -0.002142 -0.000028
+                                  mass 0.032957
+                                  momentsOfInertia [0.000005 0.000000 0.000000 0.000000 0.000007 0.000000 0.000000 0.000000 0.000005]
+                                  material "lightgrey"
+                                  children   Transform { rotation -0.002189 -0.000000 0.999998 1.734319 translation -0.012984 -0.002142 -0.000028  children Shape {geometry Capsule { radius 0.015000 height 0.026319 }}}
+                                
+                                
+                                }
+                                DEF RightHandMiddle3 Joint 
+                                {
+                                  jointType "rotate"
+                                  jointAxis "Z"
+                                  translation -0.025968 -0.004285 -0.000057
+                                  children [
+                                    Segment 
+                                    {
+                                      centerOfMass 0.000000 0.000000 0.000000
+                                      mass 0.033393
+                                      momentsOfInertia [0.000005 0.000000 0.000000 0.000000 0.000005 0.000000 0.000000 0.000000 0.000005]
+                                      material "lightgrey"
+                                      #children   Shape {geometry Ellipsoid { size 0.020000 0.020000 0.020000 }}
+                                      children   Transform { rotation -0.002189 -0.000000 0.999998 1.734319 translation -0.012984 -0.002142 -0.000028  children Shape {geometry Capsule { radius 0.015000 height 0.020319 }}}
+                                    
+                                    
+                                    }
+                                  ]
+                                } # RightHandMiddle3
+                                
+                              ]
+                            } # RightHandMiddle2
+                            
+                          ]
+                        } # RightHandMiddle1
+                        
+                        DEF RightHandRing1 Joint 
+                        {
+                          jointType "rotate"
+                          jointAxis "ZXY"
+                          translation -0.087041 0.002168 -0.010856
+                          children [
+                            Segment 
+                            {
+                              centerOfMass -0.021566 -0.003192 0.000579
+                              mass 0.054619
+                              momentsOfInertia [0.000014 0.000000 0.000000 0.000000 0.000011 0.000000 0.000000 0.000000 0.000014]
+                              material "lightgrey"
+                              children   Transform { rotation 0.026829 -0.000000 0.999640 1.717703 translation -0.021566 -0.003192 0.000579  children Shape {geometry Capsule { radius 0.015000 height 0.043617 }}}
+                            
+                            
+                            }
+                            DEF RightHandRing2 Joint 
+                            {
+                              jointType "rotate"
+                              jointAxis "Z"
+                              translation -0.043132 -0.006385 0.001158
+                              children [
+                                Segment 
+                                {
+                                  centerOfMass -0.013093 -0.001936 0.000230
+                                  mass 0.033152
+                                  momentsOfInertia [0.000005 0.000000 0.000000 0.000000 0.000007 0.000000 0.000000 0.000000 0.000005]
+                                  material "lightgrey"
+                                  children   Transform { rotation 0.017583 -0.000000 0.999845 1.717605 translation -0.013093 -0.001936 0.000230  children Shape {geometry Capsule { radius 0.015000 height 0.026474 }}}
+                                
+                                
+                                }
+                                DEF RightHandRing3 Joint 
+                                {
+                                  jointType "rotate"
+                                  jointAxis "Z"
+                                  translation -0.026185 -0.003873 0.000460
+                                  children [
+                                    Segment 
+                                    {
+                                      centerOfMass 0.000000 0.000000 0.000000
+                                      mass 0.033393
+                                      momentsOfInertia [0.000005 0.000000 0.000000 0.000000 0.000005 0.000000 0.000000 0.000000 0.000005]
+                                      material "lightgrey"
+                                      #children   Shape {geometry Ellipsoid { size 0.020000 0.020000 0.020000 }}
+                                      children   Transform { rotation 0.017583 -0.000000 0.999845 1.717605 translation -0.013093 -0.001936 0.000230  children Shape {geometry Capsule { radius 0.015000 height 0.020474 }}}
+                                    
+                                    
+                                    }
+                                  ]
+                                } # RightHandRing3
+                                
+                              ]
+                            } # RightHandRing2
+                            
+                          ]
+                        } # RightHandRing1
+                        
+                        DEF RightHandPinky1 Joint 
+                        {
+                          jointType "rotate"
+                          jointAxis "ZXY"
+                          translation -0.080697 0.001265 -0.029865
+                          children [
+                            Segment 
+                            {
+                              centerOfMass -0.016230 -0.003365 0.001119
+                              mass 0.041607
+                              momentsOfInertia [0.000008 0.000000 0.000000 0.000000 0.000008 0.000000 0.000000 0.000000 0.000008]
+                              material "lightgrey"
+                              children   Transform { rotation 0.068789 -0.000000 0.997631 1.774759 translation -0.016230 -0.003365 0.001119  children Shape {geometry Capsule { radius 0.015000 height 0.033226 }}}
+                            
+                            
+                            }
+                            DEF RightHandPinky2 Joint 
+                            {
+                              jointType "rotate"
+                              jointAxis "Z"
+                              translation -0.032460 -0.006730 0.002238
+                              children [
+                                Segment 
+                                {
+                                  centerOfMass -0.011105 -0.002304 0.000667
+                                  mass 0.028454
+                                  momentsOfInertia [0.000004 0.000000 0.000000 0.000000 0.000006 0.000000 0.000000 0.000000 0.000004]
+                                  material "lightgrey"
+                                  children   Transform { rotation 0.059960 0.000000 0.998201 1.775024 translation -0.011105 -0.002304 0.000667  children Shape {geometry Capsule { radius 0.015000 height 0.022723 }}}
+                                
+                                
+                                }
+                                DEF RightHandPinky3 Joint 
+                                {
+                                  jointType "rotate"
+                                  jointAxis "Z"
+                                  translation -0.022211 -0.004608 0.001334
+                                  children [
+                                    Segment 
+                                    {
+                                      centerOfMass 0.000000 0.000000 0.000000
+                                      mass 0.033393
+                                      momentsOfInertia [0.000005 0.000000 0.000000 0.000000 0.000005 0.000000 0.000000 0.000000 0.000005]
+                                      material "lightgrey"
+                                      #children   Shape {geometry Ellipsoid { size 0.020000 0.020000 0.020000 }}
+                                      children   Transform { rotation 0.059960 0.000000 0.998201 1.775024 translation -0.011105 -0.002304 0.000667  children Shape {geometry Capsule { radius 0.015000 height 0.016723 }}}
+                                    }
+                                  ]
+                                } # RightHandPinky3
+                                
+                              ]
+                            } # RightHandPinky2
+                            
+                          ]
+                        } # RightHandPinky1
+          
+                      ]
+                    } # RightWrist
+                        ]
+                      } # RightElbow
+                    ]
+                   } # RightShoulder
+                  
+              
+              DEF Neck Joint 
+              {
+                jointType "rotate"
+                jointAxis "YZX"
+                translation 0.000450 0.327652 0.010085
+                children [
+                  Segment 
+                  {
+                    centerOfMass 0.000100 0.099981 -0.000113
+                    mass 2.984798
+                    momentsOfInertia [0.001552 -0.000000 -0.000004 -0.000000 0.001549 0.000001 -0.000004 0.000001 0.001552]
+                    material "lightgrey"
+                    children   Transform { rotation 0.000000 0.000000 0.000000 0.000000 translation 0.000000 0.100000 0.000000  children Shape {geometry Box { size 0.130000 0.170000 0.130000 }}}
+                  
+                  
+                  }
+				]
+              } # Neck
+        ]
+      } # Chest
+      
+    ]
+  } # Hips
+   ]
+}

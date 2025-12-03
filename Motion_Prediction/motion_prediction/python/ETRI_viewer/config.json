@@ -1,0 +1,143 @@
+{
+  "CHART_UPDATE_FPS": "50",
+  "SERVER_IP": "127.0.0.1",
+  "SERVER_PORT": "9999",
+  "UNREAL_HEARTBEAT_IP": "192.168.1.125",
+  "UNREAL_HEARTBEAT_PORT": "29998",
+  "TRAINING_ADDRESS": "127.0.0.1:5001",
+  "ETRIREC_ADDRESS": "127.0.0.1:65433",
+  "BVH_XSENS_ADDRESS": "127.0.0.1:19999",
+  "BVH_OPTITRACK_ADDRESS": "192.168.1.125:19999",
+  "FUTEK_SENSOR_NUM": 1,
+  "OPTITRACK_MARKER_NUM": 39,
+  "OPTITRACK_SKELETON_NUM": 52,
+  "futek": false,
+  "optitrack": false,
+  "xsens": false,
+  "amti": false,
+  "delsys": false,
+  "mono_camera": false,
+  "FMG/MMG": false,
+  "softsensor": false,
+  "csv": false,
+  "tcp": false,
+  "emulation": false,
+  "etri_rec": false,
+  "unreal_heartbeat": false,
+  "FMGMMG": false,
+  "training": false,
+  "BVH": false,
+  "unreal": false,
+  "BVH_Xsens": false,
+  "BVH_Optitrack": false,
+  "XSENS_CONTAINS_SCALE": true,
+  "futekOptions": {
+    "yRange": true,
+    "yMin": -222,
+    "yMax": 222,
+    "yLabel": true,
+    "yLabelWidth": 50
+  },
+  "optitrackOptions": {
+    "marker": {
+      "left": {
+        "yRange": false,
+        "yMin": -100,
+        "yMax": 100,
+        "yLabel": true,
+        "yLabelWidth": 50
+      }
+    },
+    "skeleton": {
+      "left": {
+        "yRange": false,
+        "yMin": -100,
+        "yMax": 100,
+        "yLabel": true,
+        "yLabelWidth": 50
+      },
+      "right": {
+        "yRange": false,
+        "yMin": -100,
+        "yMax": 100,
+        "yLabel": true,
+        "yLabelWidth": 50
+      }
+    }
+  },
+  "xsensOptions": {
+    "yRange": true,
+    "yMin": -50,
+    "yMax": 50,
+    "yLabel": true,
+    "yLabelWidth": 50
+  },
+  "amtiOptions": {
+    "left": {
+      "yRange": true,
+      "yMin": -400,
+      "yMax": 2000,
+      "yLabel": true,
+      "yLabelWidth": 50
+    },
+    "right": {
+      "yRange": true,
+      "yMin": -400,
+      "yMax": 2000,
+      "yLabel": true,
+      "yLabelWidth": 50
+    }
+  },
+  "delsysOptions": {
+    "yRange": true,
+    "yMin": -7,
+    "yMax": 7,
+    "yLabel": true,
+    "yLabelWidth": 50
+  },
+  "IMU_accOptions": {
+    "yRange": true,
+    "yMin": -10,
+    "yMax": 10,
+    "yLabel": true,
+    "yLabelWidth": 50
+  },
+  "IMU_gyroOptions": {
+    "yRange": true,
+    "yMin": -10,
+    "yMax": 10,
+    "yLabel": true,
+    "yLabelWidth": 50
+  },
+  "insole_R_FSROptions": {
+    "yRange": true,
+    "yMin": 0,
+    "yMax": 6000,
+    "yLabel": true,
+    "yLabelWidth": 50
+  },
+  "insole_R_AccOptions": {
+    "yRange": true,
+    "yMin": -50,
+    "yMax": 50,
+    "yLabel": true,
+    "yLabelWidth": 50
+  },
+  "insole_L_FSROptions": {
+    "yRange": true,
+    "yMin": 0,
+    "yMax": 6000,
+    "yLabel": true,
+    "yLabelWidth": 50
+  },
+  "insole_L_AccOptions": {
+    "yRange": true,
+    "yMin": -50,
+    "yMax": 50,
+    "yLabel": true,
+    "yLabelWidth": 50
+  },
+  "true": false,
+  "false": false,
+  "true": false
+}

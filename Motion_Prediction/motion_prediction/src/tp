@@ -1,0 +1,2 @@
+before="$(pwd)"
+cd ~/sample_python/work;python3 test_sample_python.py $before/$1

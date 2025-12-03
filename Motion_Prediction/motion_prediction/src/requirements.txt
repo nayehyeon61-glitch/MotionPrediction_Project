@@ -1,0 +1,14 @@
+torch
+torchvision
+torchaudio
+easydict
+gym==0.21.0
+matplotlib==3.7.1
+pybullet==3.2.5
+stable-baselines3==1.0.0
+h5py
+tensorboardX
+tensorflow
+python-dateutil
+einops==0.8.0
+tqdm==4.66.5
